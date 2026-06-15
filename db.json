@@ -1,0 +1,34 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Administrador",
+      "email": "admin@bet.com",
+      "senha": "123",
+      "perfil": "admin",
+      "saldo": 0
+    },
+    {
+      "id": 2,
+      "nome": "João",
+      "email": "joao@bet.com",
+      "senha": "123",
+      "perfil": "usuario",
+      "saldo": 1000
+    }
+  ],
+
+  "eventos": [
+    {
+      "id": 1,
+      "timeA": "Brasil",
+      "timeB": "Argentina",
+      "esporte": "Futebol",
+      "data": "2026-07-10",
+      "status": "aberto",
+      "resultado": ""
+    }
+  ],
+
+  "apostas": []
+}
