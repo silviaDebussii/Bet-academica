@@ -15,7 +15,6 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
       <div className="container">
-
         <Link
           className="navbar-brand"
           to={usuario?.perfil === "admin" ? "/admin" : "/usuario"}
@@ -27,24 +26,15 @@ export default function Navbar() {
 
           {usuario?.perfil === "admin" && (
             <>
-              <Link
-                className="nav-link"
-                to="/admin"
-              >
+              <Link className="nav-link" to="/admin">
                 Dashboard
               </Link>
 
-              <Link
-                className="nav-link"
-                to="/eventos"
-              >
+              <Link className="nav-link" to="/eventos">
                 Eventos
               </Link>
 
-              <Link
-                className="nav-link"
-                to="/criar-evento"
-              >
+              <Link className="nav-link" to="/criar-evento">
                 Novo Evento
               </Link>
             </>
@@ -52,18 +42,20 @@ export default function Navbar() {
 
           {usuario?.perfil === "usuario" && (
             <>
-              <Link
-                className="nav-link"
-                to="/usuario"
-              >
+              <Link className="nav-link" to="/usuario">
                 Dashboard
               </Link>
 
-              <Link
-                className="nav-link"
-                to="/apostar"
-              >
+              <Link className="nav-link" to="/apostar">
                 Apostar
+              </Link>
+
+              <Link className="nav-link" to="/historico">
+                Histórico
+              </Link>
+
+              <Link className="nav-link" to="/ranking">
+                Ranking
               </Link>
             </>
           )}
@@ -76,7 +68,6 @@ export default function Navbar() {
           </button>
 
         </div>
-
       </div>
     </nav>
   );
