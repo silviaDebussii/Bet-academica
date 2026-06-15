@@ -1,40 +1,39 @@
 import { useContext } from "react";
+import Navbar from "../components/Navbar";
 import { AuthContext } from "../contexts/AuthContext";
-import { useNavigate } from "react-router-dom";
 
 export default function UserDashboard() {
-  const { usuario, logout } =
+
+  const { usuario } =
     useContext(AuthContext);
 
-  const navigate = useNavigate();
-
-  function sair() {
-    logout();
-    navigate("/");
-  }
-
   return (
-    <div className="container mt-4">
+    <>
+      <Navbar />
 
-      <h1>
-        Bem-vindo Jogador
-      </h1>
+      <div className="container mt-4">
 
-      <p>
-        {usuario?.nome}
-      </p>
+        <h1>
+          Área do Jogador
+        </h1>
 
-      <h3>
-        Saldo: R$ {usuario?.saldo}
-      </h3>
+        <div className="card p-4">
 
-      <button
-        className="btn btn-danger"
-        onClick={sair}
-      >
-        Sair
-      </button>
+          <h3>
+            {usuario?.nome}
+          </h3>
 
-    </div>
+          <h4>
+            Saldo Atual:
+          </h4>
+
+          <h2 className="text-success">
+            R$ {usuario?.saldo}
+          </h2>
+
+        </div>
+
+      </div>
+    </>
   );
 }

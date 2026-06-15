@@ -1,7 +1,7 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Administrador",
       "email": "admin@bet.com",
       "senha": "123",
@@ -9,16 +9,44 @@
       "saldo": 0
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "João Jogador",
       "email": "joao@bet.com",
       "senha": "123",
       "perfil": "usuario",
-      "saldo": 1000
+      "saldo": 680
     }
   ],
-
-  "eventos": [],
-
-  "apostas": []
+  "eventos": [
+    {
+      "timeA": "brasil",
+      "timeB": "alemanha",
+      "esporte": "",
+      "data": "2026-06-15",
+      "status": "aberto",
+      "resultado": "",
+      "id": "lkofZ9eFEA0"
+    }
+  ],
+  "apostas": [
+    {
+      "usuarioId": "2",
+      "eventoId": "lkofZ9eFEA0",
+      "palpite": "7X1",
+      "valor": 20,
+      "status": "pendente",
+      "retorno": 0,
+      "id": "wWS2BSv0xMI"
+    },
+    {
+      "usuarioId": "2",
+      "eventoId": "lkofZ9eFEA0",
+      "palpite": "4X3",
+      "valor": 300,
+      "status": "pendente",
+      "retorno": 0,
+      "id": "c6dWC9B-3eM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

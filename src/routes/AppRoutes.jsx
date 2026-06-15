@@ -1,21 +1,21 @@
 import { Routes, Route } from "react-router-dom";
+import { useContext } from "react";
 
 import Login from "../pages/Login";
 import AdminDashboard from "../pages/AdminDashboard";
 import UserDashboard from "../pages/UserDashboard";
+import Events from "../pages/Events";
+import CreateEvent from "../pages/CreateEvent";
+import BetPage from "../pages/BetPage";
 
 import ProtectedRoute from "../components/ProtectedRoute";
-
-import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 
 export default function AppRoutes() {
-  const { usuario } =
-    useContext(AuthContext);
+  const { usuario } = useContext(AuthContext);
 
   return (
     <Routes>
-
       <Route
         path="/"
         element={<Login />}
@@ -45,6 +45,41 @@ export default function AppRoutes() {
         }
       />
 
+      <Route
+        path="/eventos"
+        element={
+          <ProtectedRoute
+            usuario={usuario}
+            perfil="admin"
+          >
+            <Events />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/criar-evento"
+        element={
+          <ProtectedRoute
+            usuario={usuario}
+            perfil="admin"
+          >
+            <CreateEvent />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/apostar"
+        element={
+          <ProtectedRoute
+            usuario={usuario}
+            perfil="usuario"
+          >
+            <BetPage />
+          </ProtectedRoute>
+        }
+      />
     </Routes>
   );
 }
