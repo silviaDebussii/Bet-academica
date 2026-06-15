@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "nome": "João",
+      "nome": "João Jogador",
       "email": "joao@bet.com",
       "senha": "123",
       "perfil": "usuario",
@@ -18,17 +18,7 @@
     }
   ],
 
-  "eventos": [
-    {
-      "id": 1,
-      "timeA": "Brasil",
-      "timeB": "Argentina",
-      "esporte": "Futebol",
-      "data": "2026-07-10",
-      "status": "aberto",
-      "resultado": ""
-    }
-  ],
+  "eventos": [],
 
   "apostas": []
 }
