@@ -117,14 +117,15 @@ Senha: 123
 * Implementação do Login
 * Rotas protegidas
 * Context API
-
+* Integração com JSON Server*
+* Cadastro de eventos*
+  
 ### Integrante 2
 
-* Cadastro de eventos
 * Sistema de apostas
 * Histórico
 * Ranking
-* Integração com JSON Server
+
 
 ---
 
@@ -139,16 +140,6 @@ Senha: 123
 * Histórico de Apostas
 * Ranking de Jogadores
 
----
-
-## Dificuldades Encontradas
-
-* Implementação das rotas protegidas.
-* Atualização automática dos saldos dos usuários.
-* Processamento dos resultados das apostas.
-* Integração entre React e JSON Server.
-
----
 
 ## Melhorias Futuras
 
